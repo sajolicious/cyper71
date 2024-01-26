@@ -1,0 +1,10 @@
+.protfolio-hero-bg {
+    height:100%;
+    margin:0;
+    padding:0;
+  background: 
+    linear-gradient(45deg,  transparent 0%, transparent 57%, #0b1b3c 100%),
+    linear-gradient(-45deg, #1e448c 0%,  #5f3765 0.3%, #122b5d 112%,  transparent 11% ),
+    linear-gradient(-90deg, #1e448c 100%, #a43931 65%, transparent 20% )
+    ;
+}
