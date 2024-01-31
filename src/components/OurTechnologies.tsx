@@ -18,6 +18,8 @@ import {
   FaCog,
   FaProjectDiagram,
 } from 'react-icons/fa'
+import CategoryButton from './CategoryButton';
+import IconGrid from './IconGrid';
 
 interface Technology {
   name: string
@@ -124,12 +126,12 @@ const categories: Technology[] = [
 const defaultCategory = categories[0]
 
 const TechnologySection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<Technology>(defaultCategory)
+  const [selectedCategory, setSelectedCategory] = useState<Technology>(defaultCategory);
 
   return (
     <section className="py-16 h-full flex items-center justify-center">
       <div className="container mx-auto text-center">
-        <div className="leading-[36px] md:leading-[45px] lg:leading-[72px] font-popp text-[36px] md:text-[45px] font-bold text-black lg:text-7xl m-6">
+        <div className="leading-[36px] md:leading-[45px] lg:leading-[72px] font-popp text-[36px] md:text-[45px] font-bold text-black lg:text-6xl m-6">
           <span className="outlined_font">SERVICES</span>
           <br />
           <span>WE </span>
@@ -137,34 +139,18 @@ const TechnologySection: React.FC = () => {
         </div>
         <div className="flex flex-wrap mb-4 space-x-4 justify-center items-center">
           {categories.map((category) => (
-            <button
+            <CategoryButton
               key={category.name}
-              className={`px-4 py-2 text-lg font-semibold ${
-                selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'
-              } rounded mb-4 md:mb-0 md:mr-4`}
+              name={category.name}
+              isSelected={selectedCategory === category}
               onClick={() => setSelectedCategory(category)}
-            >
-              {category.name}
-            </button>
+            />
           ))}
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 p-">
-          {selectedCategory.icons.map((icon, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center text-center bg-[#ED52CA] bg-gradient-to-r from-blue-500 to-purple-500  p-4 border border-gray-300 rounded-md text-white  font-bold mb-4"
-            >
-              {React.cloneElement(icon as React.ReactElement, { key: index })} {/* Clone element and add a key */}
-              <p className="text-sm mt-2">{(icon as React.ReactElement).key}</p>
-            </div>
-          ))}
-          {selectedCategory.icons.length === 0 && (
-            <div className="text-center text-gray-500 col-span-full">No icons available for this category.</div>
-          )}
-        </div>
+        <IconGrid icons={selectedCategory.icons} />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TechnologySection
+export default TechnologySection;

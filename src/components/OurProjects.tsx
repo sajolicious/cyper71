@@ -8,33 +8,39 @@ import projectImage6 from '../assets/preview.png'
 interface Project {
   title: string
   description: string
+  language: string
   image: string
 }
 
 const projects: Project[] = [
   {
     title: 'Food Ordering System',
-    description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
+    description: 'A fully functional Ecommerce website using React Django also using Redux for state management.',
+    language: 'React Bootstrap Redux Django MySql ',
     image: projectImage1,
   },
   {
     title: 'Ecommerce Website',
-    description: 'Description for another project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'A fully functional Ecommerce website using MERN also using Redux for state management',
+    language: 'React tailwind Express Node MongoDB ',
     image: projectImage2,
   },
   {
     title: 'CMS Project',
     description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
+    language: 'React Tailwind Express Node MongoDB',
     image: projectImage4,
   },
   {
-    title: 'Ecommerce Website',
-    description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
+    title: 'Company Ui',
+    description: 'A fully functional company website.',
+    language: 'React Tailwind',
     image: projectImage5,
   },
   {
-    title: 'Another Project',
-    description: 'Description for another project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Ui Design',
+    description: 'Completed modern website',
+    language: 'React Tailwind',
     image: projectImage6,
   },
 
@@ -46,8 +52,8 @@ const ProjectShowcase: React.FC = () => {
     <div className="py-16">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800">Explore Our Products</h2>
-          <p className="text-gray-600 mt-2">Discover innovative solutions crafted for your needs</p>
+          <h2 className="text-6xl font-bold text-gray-800">Explore Our Products</h2>
+          <p className="text-2xltext-gray-600 mt-2">Discover innovative solutions crafted for your needs</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,11 +66,13 @@ const ProjectShowcase: React.FC = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+
                   className="rounded-md object-cover w-full h-full border border-gray-300"
                 />
               </div>
               <div className="text-center">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+                <h2 className='text-bold'>{project.language}</h2>
                 <p className="text-gray-600">{project.description}</p>
               </div>
             </div>

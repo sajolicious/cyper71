@@ -1,12 +1,12 @@
 
 const AboutContent = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 ">
       <div className="bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Pragmatic Process</h2>
         <p className="text-base text-gray-600">
           Many teams attempt to deliver a project in a single iteration. Pressured by a constantly evolving market, they
-          build too fast - taking on 'technical debt', which creates future problems. At WellDev, we adopt a pragmatic
+          build too fast - taking on 'technical debt', which creates future problems. At Cypheria71, we adopt a pragmatic
           approach, building in stages to ensure efficient and debt-free delivery. By executing reliable project
           management with agile practices, we ensure the achievement of critical milestones within time, targets, and
           budgets.

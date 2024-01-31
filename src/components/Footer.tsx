@@ -1,6 +1,6 @@
-import React from 'react'
-import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {}
 
@@ -54,9 +54,11 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-white text-center py-2 mt-4">© 2023 | All rights reserved by Cypheria71</div>
+      <div className="border-t border-white text-center py-2 mt-4">
+        © 2023 | All rights reserved by Cypheria71
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

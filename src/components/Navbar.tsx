@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { AiOutlinePaperClip } from 'react-icons/ai'
-import { IoMoonOutline, IoSunnyOutline, IoMenuOutline } from 'react-icons/io5'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlinePaperClip } from 'react-icons/ai';
+import { IoMoonOutline, IoSunnyOutline, IoMenuOutline } from 'react-icons/io5';
 
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="bg-gray-600 fixed top-0 w-full z-50">
+    <nav className="bg-gray-800 fixed top-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <AiOutlinePaperClip className="h-6 w-6 text-primary" />
-            <span className="ml-2 text-white font-bold">Cypheria71</span>
-          </a>
+            <span className="ml-2 text-white font-bold text-xl">Cypheria71</span>
+          </Link>
 
           {/* Primary menu */}
           <div className="hidden lg:flex space-x-8 text-white">
@@ -82,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         </div>
       )}
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
