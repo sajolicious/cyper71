@@ -31,23 +31,21 @@ const Home: React.FC = () => {
 
   return (
     <>
-   
       <animated.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         style={svgSpring}
         className="absolute bottom-0 w-full"
+        fill="#662983" // Set the fill color
+        fillOpacity="0.7" // Set the fill opacity
+        stroke="none" // Remove stroke
       >
-        <path
-          fill="rgba(90, 152, 211, 0.3)" // Adjust the transparency here
-          fillOpacity="1"
-          d="M0,96L80,101.3C160,103,320,112,480,128C640,139,800,149,960,154.7C1120,160,1280,160,1360,160L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-        ></path>
+        <path d="M0,96L80,101.3C160,103,320,112,480,128C640,139,800,149,960,154.7C1120,160,1280,160,1360,160L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
       </animated.svg>
 
       <div className="flex flex-col h-screen w-full items-center justify-center relative">
         <animated.div style={titleSpring} className="text-black  text-center z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
             We Design and Develop <br />
             <span className="text-[#662983]">Innovative Products</span> <br />
             for Businesses and Startups

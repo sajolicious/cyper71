@@ -129,7 +129,12 @@ const TechnologySection: React.FC = () => {
   return (
     <section className="py-16 h-full flex items-center justify-center">
       <div className="container mx-auto text-center">
-        <h2 className="text-6xl font-bold mb-10">Technologies We Use</h2>
+        <div className="leading-[36px] md:leading-[45px] lg:leading-[72px] font-popp text-[36px] md:text-[45px] font-bold text-black lg:text-7xl m-6">
+          <span className="outlined_font">SERVICES</span>
+          <br />
+          <span>WE </span>
+          <span className="outlined_font">PROVIDE</span>
+        </div>
         <div className="flex flex-wrap mb-4 space-x-4 justify-center items-center">
           {categories.map((category) => (
             <button
@@ -143,11 +148,11 @@ const TechnologySection: React.FC = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 p-">
           {selectedCategory.icons.map((icon, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center text-center bg-black p-4 border border-gray-300 rounded-md text-white mb-4"
+              className="flex flex-col items-center justify-center text-center bg-[#ED52CA] bg-gradient-to-r from-blue-500 to-purple-500  p-4 border border-gray-300 rounded-md text-white  font-bold mb-4"
             >
               {React.cloneElement(icon as React.ReactElement, { key: index })} {/* Clone element and add a key */}
               <p className="text-sm mt-2">{(icon as React.ReactElement).key}</p>

@@ -1,6 +1,9 @@
 import React from 'react'
 import projectImage1 from '../assets/project1.png'
 import projectImage2 from '../assets/project2.png'
+import projectImage4 from '../assets/project4.png'
+import projectImage5 from '../assets/wepage.png'
+import projectImage6 from '../assets/preview.png'
 
 interface Project {
   title: string
@@ -10,56 +13,37 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Ecommerce Website',
+    title: 'Food Ordering System',
     description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
     image: projectImage1,
   },
   {
-    title: 'Another Project',
+    title: 'Ecommerce Website',
     description: 'Description for another project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     image: projectImage2,
   },
   {
-    title: 'Ecommerce Website',
+    title: 'CMS Project',
     description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
-    image: projectImage1,
+    image: projectImage4,
   },
   {
     title: 'Ecommerce Website',
     description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
-    image: projectImage1,
+    image: projectImage5,
   },
   {
     title: 'Another Project',
     description: 'Description for another project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: projectImage2,
+    image: projectImage6,
   },
-  {
-    title: 'Ecommerce Website',
-    description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
-    image: projectImage1,
-  },
-  {
-    title: 'Ecommerce Website',
-    description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
-    image: projectImage1,
-  },
-  {
-    title: 'Another Project',
-    description: 'Description for another project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: projectImage2,
-  },
-  {
-    title: 'Ecommerce Website',
-    description: 'A fully functional Ecommerce website using MERN also using Redux for state management.',
-    image: projectImage1,
-  },
+
   // Add more projects as needed
 ]
 
 const ProjectShowcase: React.FC = () => {
   return (
-    <div className="bg-gray-100 py-16">
+    <div className="py-16">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800">Explore Our Products</h2>
@@ -70,7 +54,7 @@ const ProjectShowcase: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-8 rounded-md shadow-md transition-transform transform hover:scale-105 bg-white"
+              className="flex flex-col items-center p-8 rounded-md shadow-md transition-transform transform hover:scale-105"
             >
               <div className="aspect-w-16 aspect-h-9 mb-4">
                 <img

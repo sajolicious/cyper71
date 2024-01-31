@@ -52,8 +52,13 @@ const ContactUs: React.FC = () => {
   return (
     <>
       <div className="flex flex-col  w-full h-screen  items-center justify-center">
-        <h1 className="text-6xl font-bold mb-10 text-black">Contact Us</h1>
-
+        <div className="col-span-full text-center mb-6">
+          <div className="leading-[36px] md:leading-[45px] lg:leading-[72px] font-popp text-[36px] md:text-[45px] font-bold text-black lg:text-7xl m-6">
+            <span className="outlined_font">CONTACT</span>
+            <br />
+            <span className="outlined_font">US</span>
+          </div>
+        </div>
         <div className="md:flex md:flex-row w-full">
           <div className="md:w-1/2  flex flex-col items-center justify-center">
             {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -73,7 +78,7 @@ const ContactUs: React.FC = () => {
                     value={formData[fieldName]}
                     onChange={handleChange}
                     required
-                    className="p-3 border border-cyan-900 w-64 md:w-96 h-14  rounded-md "
+                    className="p-3 border border-cyan-900 w-72 md:w-64 lg:w-96 h-14  rounded-md "
                   />
                 </label>
               ))}
@@ -99,7 +104,7 @@ const ContactUs: React.FC = () => {
             ].map(({ icon: Icon, text, link }) => (
               <div
                 key={text}
-                className="border flex flex-row items-center border-spacing-2 border-slate-400 w-64 md:w-96 h-14 p-4 m-2 rounded-md"
+                className="border flex flex-row items-center border-spacing-2 border-slate-400 w-72 md:w-64 lg:w-96 h-14 p-4 m-2 rounded-md"
               >
                 <Link to={link} target="_blank" rel="noopener noreferrer">
                   <Icon className="text-4xl hover:text-gray-400 cursor-pointer" />
